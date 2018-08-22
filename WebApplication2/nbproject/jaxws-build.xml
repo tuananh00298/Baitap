@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:webproject2="http://www.netbeans.org/ns/web-project/2" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSGEN SECTION
+                ===================
+            -->
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <fail if="${wsimport.bad.version}" message="WsImport ant task defined in the classpath ${j2ee.platform.wsimport.classpath} has a serious bug. See http://wiki.netbeans.org/MetroIssue for details."/>
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <property name="j2ee.platform.wsimport.classpath" value="${libs.jaxws21.classpath}"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${java.home}/../lib/tools.jar:${j2ee.platform.wsimport.classpath}:${javac.classpath}"/>
+        </taskdef>
+        <condition property="conf-dir" value="${conf.dir}/" else="">
+            <isset property="conf.dir"/>
+        </condition>
+    </target>
+    <target name="wsimport-client-NewWebService1" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/NewWebService1"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/NewWebService1" destdir="${build.generated.dir}/jax-wsCache/NewWebService1" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/NewWebService1/wsdl/localhost_8080/btday2-war/NewWebService1.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/btday2-war/NewWebService1?WSDL" xnocompile="true" xendorsed="true" package="services">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/NewWebService1/wsdl/localhost_8080/btday2-war/NewWebService1.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/NewWebService1"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/NewWebService1">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-NewWebService1" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/services"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/NewWebService1"/>
+    </target>
+    <target name="wsimport-client-ServerCustomer" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ServerCustomer"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ServerCustomer" destdir="${build.generated.dir}/jax-wsCache/ServerCustomer" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/ServerCustomer/wsdl/localhost_8080/btday2-war/ServerCustomer.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/btday2-war/ServerCustomer?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/ServerCustomer/wsdl/localhost_8080/btday2-war/ServerCustomer.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ServerCustomer"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ServerCustomer">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ServerCustomer" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/service"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/ServerCustomer"/>
+    </target>
+    <target name="wsimport-client-DemoWebService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/DemoWebService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/DemoWebService" destdir="${build.generated.dir}/jax-wsCache/DemoWebService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/DemoWebService/wsdl/localhost_8080/btday2-war/DemoWebService.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/btday2-war/DemoWebService?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/DemoWebService/wsdl/localhost_8080/btday2-war/DemoWebService.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/DemoWebService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/DemoWebService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-DemoWebService" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/service"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/DemoWebService"/>
+    </target>
+    <target name="wsimport-client-TestDemo" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/TestDemo"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/TestDemo" destdir="${build.generated.dir}/jax-wsCache/TestDemo" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/TestDemo/wsdl/localhost_8080/btday2-war/TestDemo.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/btday2-war/TestDemo?WSDL" xnocompile="true" xendorsed="true" package="com.example.controller">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/TestDemo/wsdl/localhost_8080/btday2-war/TestDemo.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/TestDemo"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/TestDemo">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-TestDemo" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/example/controller"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/TestDemo"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-NewWebService1, wsimport-client-ServerCustomer, wsimport-client-DemoWebService, wsimport-client-TestDemo"/>
+</project>

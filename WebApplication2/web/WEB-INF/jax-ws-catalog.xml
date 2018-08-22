@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/btday2-war/NewWebService1?WSDL" uri="wsdl/localhost_8080/btday2-war/NewWebService1.wsdl"/>
+    <system systemId="http://localhost:8080/btday2-war/NewWebService1?xsd=1" uri="wsdl/localhost_8080/btday2-war/NewWebService1.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/btday2-war/ServerCustomer?WSDL" uri="wsdl/localhost_8080/btday2-war/ServerCustomer.wsdl"/>
+    <system systemId="http://localhost:8080/btday2-war/ServerCustomer?xsd=1" uri="wsdl/localhost_8080/btday2-war/ServerCustomer.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/btday2-war/DemoWebService?WSDL" uri="wsdl/localhost_8080/btday2-war/DemoWebService.wsdl"/>
+    <system systemId="http://localhost:8080/btday2-war/DemoWebService?xsd=1" uri="wsdl/localhost_8080/btday2-war/DemoWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/btday2-war/TestDemo?WSDL" uri="wsdl/localhost_8080/btday2-war/TestDemo.wsdl"/>
+    <system systemId="http://localhost:8080/btday2-war/TestDemo?xsd=1" uri="wsdl/localhost_8080/btday2-war/TestDemo.xsd_1.xsd"/>
+</catalog>
